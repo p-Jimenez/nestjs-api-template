@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  dev-db:
+    image: postgres:13
+    ports:
+      - 5434:5432
+    environment: # database configuration
+      - POSTGRES_USER={username}
+      - POSTGRES_PASSWORD={password}
+      - POSTGRES_DB={databaseName} # database name
+    networks:
+      - postgres-container
+
+networks:
+  postgres-container:
