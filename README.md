@@ -18,7 +18,7 @@
 ## Installation
 
 ```bash
-$ yarn install
+$ yarn
 ```
 After installing, you can change the following files:
 - `package.json`
