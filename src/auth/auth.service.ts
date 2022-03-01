@@ -146,7 +146,7 @@ export class AuthService {
         };
     }
 
-    @Cron(CronExpression.EVERY_30_SECONDS)
+    @Cron(CronExpression.EVERY_12_HOURS)
     async removeExpiredTokens() {
 
         await this.prisma.tokenBlacklist.deleteMany({
