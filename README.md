@@ -18,7 +18,7 @@
 ## Installation
 
 ```bash
-$ npm install
+$ yarn install
 ```
 After installing, you can change the following files:
 - `package.json`
