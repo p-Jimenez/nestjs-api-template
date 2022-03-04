@@ -1,4 +1,4 @@
-import { ValidationPipe } from '@nestjs/common';
+import { ValidationPipe, ForbiddenException } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
@@ -17,7 +17,7 @@ async function bootstrap() {
       if (whitelist.indexOf(origin) !== -1) {
         callback(null, true);
       } else {
-        callback(new Error('Not allowed by CORS'));
+        callback(new ForbiddenException('Not allowed by CORS'));
       }
     },
     methods: 'GET,PUT,POST,DELETE',
